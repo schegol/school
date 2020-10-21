@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Stolzl";
+  src: local("Stolzl"),
+       local("Stolzl Regular"),
+       url("../fonts/Stolzl-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("Stolzl Medium"),
+       url("../fonts/Stolzl-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}

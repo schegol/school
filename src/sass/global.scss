@@ -1,0 +1,88 @@
+html, body{
+  min-height: 100%;
+}
+
+body {
+  @include dflex(nowrap, column, flex-start, stretch);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  font-family: "Stolzl", "Arial", sans-serif;
+  color: #000;
+  background-color: #fff;
+
+  &.modal-open {
+    padding-right: 17px;
+    overflow: hidden;
+  }
+}
+
+.header,
+.main {
+  flex-shrink: 0;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.visually-hidden-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/*
+@media (min-width: $tablet-width) {
+  .container {
+    max-width: 738px;
+  }
+
+  .col-xl-3 {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .col-xl-3 {
+    flex-basis: 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+*/
