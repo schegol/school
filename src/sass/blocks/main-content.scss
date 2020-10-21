@@ -1,0 +1,11 @@
+.main-content {
+  flex-basis: 74%;
+  background-color: $main-bg;
+}
+
+@media (max-width: $tablet-width) {
+  .main-content {
+    flex-basis: auto;
+    min-height: 100vh;
+  }
+}

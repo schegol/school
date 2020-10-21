@@ -10,11 +10,11 @@
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  background-color: $accent-color;
+  // background-color: $accent-color;
   border-radius: 4px;
 
   &:hover,
   &:focus {
-    background-color: darken($accent-color, 15%);
+    // background-color: darken($accent-color, 15%);
   }
 }

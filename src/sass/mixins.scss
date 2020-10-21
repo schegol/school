@@ -36,6 +36,6 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin transition ($prop: all) {
-  transition: $prop .1s linear;
+@mixin transition ($prop: all, $time: .1s) {
+  transition: $prop $time linear;
 }

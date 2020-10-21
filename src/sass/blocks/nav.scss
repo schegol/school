@@ -1,0 +1,143 @@
+.nav {
+  @include dflex(nowrap, row, flex-end, stretch);
+  flex-basis: 26%;
+  padding-top: 13px;
+  background-color: $nav-bg;
+}
+
+.nav__mobile-btn {
+  display: none;
+}
+
+.nav__container {
+  width: 222px;
+  margin-right: 38px;
+  margin-left: 38px;
+}
+
+.nav__logo-link {
+  display: block;
+}
+
+.nav__slogan {
+  @include reset;
+  margin-bottom: 68px;
+  font-size: 16px;
+  line-height: 16px;
+  color: rgba(255,255,255,.59);
+}
+
+.nav__menu {
+  @include list-reset;
+  @include dflex(nowrap, column, flex-start, flex-start);
+}
+
+.nav__submenu {
+  @include list-reset;
+}
+
+.nav__menu-link {
+  display: inline-block;
+  margin-bottom: 23px;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+  color: rgba(255,255,255,.6);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.nav__menu-item.parent > .nav__menu-link {
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav__menu-item.parent {
+  margin-bottom: 15px;
+}
+
+@media (max-width: $tablet-width) {
+  .nav {
+    @include transition(left, .2s);
+    position: fixed;
+    top: 0;
+    // left: 0;
+    left: -290px;
+    flex-basis: auto;
+    width: 320px;
+    max-width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+  }
+
+  .nav--open {
+    left: 0;
+  }
+
+  .nav__mobile-btn {
+    @include reset;
+    @include dflex(nowrap, row, center, center);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    & svg {
+      @include transition(transform, .2s);
+      transform: rotate(180deg);
+    }
+
+    & path {
+      @include transition(fill);
+      fill: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      & path {
+        fill: #000;
+      }
+    }
+  }
+
+  .nav--open .nav__mobile-btn {
+    & svg {
+      transform: rotate(0);
+    }
+  }
+
+  .nav__container {
+    width: 100%;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .nav {
+    left: -320px;
+    // left: 0;
+
+    &--open {
+      left: 0;
+    }
+  }
+
+  .nav__mobile-btn {
+    top: 10px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: $nav-bg;
+  }
+
+  .nav--open .nav__mobile-btn {
+    right: 0;
+  }
+}

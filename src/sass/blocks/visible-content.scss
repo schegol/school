@@ -1,0 +1,10 @@
+.visible-content {
+  @include dflex(nowrap, row, flex-start, stretch);
+  min-height: 100vh;
+}
+
+@media (max-width: $tablet-width) {
+  .visible-content {
+    display: block;
+  }
+}
