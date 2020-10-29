@@ -1,0 +1,37 @@
+.test-start {
+  max-width: 780px;
+}
+
+.test-start__highlighted-text {
+  @include reset;
+  margin-bottom: 27px;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 23px;
+}
+
+.test-start__usual-text {
+  @include reset;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 20px;
+  color: rgba(0,0,0,.28);
+}
+
+@media (max-width: $mobile-width) {
+  .test-start__highlighted-text {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .test-start__usual-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .test-start__btn {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

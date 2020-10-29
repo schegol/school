@@ -1,6 +1,7 @@
 .nav {
   @include dflex(nowrap, row, flex-end, stretch);
   flex-basis: 26%;
+  max-width: 26vw;
   padding-top: 13px;
   background-color: $nav-bg;
 }
@@ -17,6 +18,11 @@
 
 .nav__logo-link {
   display: block;
+  max-width: 143px
+}
+
+.nav__logo {
+  max-width: 143px
 }
 
 .nav__slogan {
@@ -36,6 +42,10 @@
   @include list-reset;
 }
 
+.nav__menu-item {
+  width: 100%;
+}
+
 .nav__menu-link {
   display: inline-block;
   margin-bottom: 23px;
@@ -44,6 +54,7 @@
   line-height: 22px;
   letter-spacing: -0.1px;
   color: rgba(255,255,255,.6);
+  outline: none;
 
   &:hover,
   &:focus {
@@ -51,13 +62,36 @@
   }
 }
 
-.nav__menu-item.parent > .nav__menu-link {
+.nav__menu-item--parent > .nav__menu-link {
   color: #fff;
   font-weight: 500;
 }
 
-.nav__menu-item.parent {
+.nav__menu-item--parent {
+  position: relative;
   margin-bottom: 15px;
+}
+
+.nav__parent-button {
+    @include transition(transform);
+    @include reset;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon-arrow-nav.svg");
+    background-size: 12px 6px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    transform: rotate(0);
+    cursor: pointer;
+
+    &--closed {
+      transform: rotate(180deg);
+    }
 }
 
 @media (max-width: $tablet-width) {
@@ -116,6 +150,14 @@
 
   .nav__container {
     width: 100%;
+  }
+
+  .nav__logo-link {
+    margin: 0 auto;
+  }
+
+  .nav__slogan {
+    text-align: center;
   }
 }
 

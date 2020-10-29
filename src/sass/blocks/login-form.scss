@@ -108,13 +108,13 @@
   font-weight: 500;
   line-height: 16px;
   text-align: center;
-  background-color: #000;
+  background-color: $link-color;
   border: none;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: lighten(#000, 20%);
+    background-color: lighten($link-color, 10%);
   }
 }
 

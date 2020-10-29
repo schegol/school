@@ -1,0 +1,25 @@
+.main {
+  padding-top: 40px;
+  padding-bottom: 110px;
+}
+
+@media (max-width: $tablet-width) {
+  .main {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main {
+    padding-top: 25px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .main {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+}

@@ -1,0 +1,37 @@
+.index-info__list {
+  padding-left: 20px;
+}
+
+.index-info__item {
+  &:not(:last-child) {
+    margin-bottom: 44px;
+  }
+}
+
+.index-info__link {
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: $tablet-width) {
+  .index-info__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .index-info__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .index-info__link {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}

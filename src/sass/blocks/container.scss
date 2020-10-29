@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+@media (max-width: $desktop-width) {
+  .container {
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media (max-width: $laptop-width) {
   .container {
     width: 100%;
@@ -16,14 +24,14 @@
 @media (max-width: $tablet-width) {
   .container {
     padding-right: 35px;
-    padding-left: 35px;
+    padding-left: 65px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .container {
     padding-right: 15px;
-    padding-left: 35px;
+    padding-left: 45px;
   }
 }
 

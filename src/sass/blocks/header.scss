@@ -1,0 +1,139 @@
+.header {
+  height: 75px;
+  background-color: $header-bg;
+}
+
+.header .container {
+  height: 100%;
+}
+
+.header__navigation {
+  @include dflex(nowrap, row, space-between, center);
+  height: 100%;
+}
+
+.header__journal-link {
+  @include dflex(nowrap, row, flex-start, center);
+}
+
+.header__journal-link-text {
+  margin-left: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -.1px;
+}
+
+.header__journal-icon {
+  @include transition(background-color);
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-position: center;
+  background-size: 19px 15px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-journal.svg");
+  background-color: $header-btn-bg;
+  border-radius: 50%;
+}
+
+.header__journal-link:hover .header__journal-icon,
+.header__journal-link:focus .header__journal-icon {
+  background-color: lighten($link-color, 10%);
+}
+
+.header__profile-area {
+  @include dflex(nowrap, row, flex-end, center);
+  position: relative;
+}
+
+.header__profile-link {
+  display: block;
+  padding-left: 55px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -.04px;
+}
+
+.header__profile-photo-block {
+  @include transition(background-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  background-color: $header-btn-bg;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.header__profile-link:hover .header__profile-photo-block,
+.header__profile-link:focus .header__profile-photo-block {
+  background-color: lighten($link-color, 10%);
+}
+
+.header__profile-photo {
+  position: relative;
+  top: 50%;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: translateY(-50%);
+}
+
+.header__profile-logout {
+  display: block;
+  width: 19px;
+  height: 21px;
+  margin-left: 31px;
+  outline: none;
+}
+
+.header__profile-logout path {
+  @include transition(fill);
+  fill: #000;
+}
+
+.header__profile-logout:hover path,
+.header__profile-logout:focus path {
+  fill: lighten($link-color, 10%);
+}
+
+@media (max-width: $mobile-width) {
+  .header__profile-photo-block {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header__profile-name {
+    display: none;
+  }
+
+  .header__profile-photo-block {
+    position: static;
+    top: 0;
+    transform: translate(0);
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .header {
+    height: 60px;
+  }
+
+  .header__navigation {
+    justify-content: center;
+  }
+
+  .header__journal-link-text {
+    display: none;
+  }
+
+  .header__profile-link {
+    margin-left: 31px;
+    padding-left: 0;
+  }
+}

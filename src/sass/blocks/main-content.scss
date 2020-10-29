@@ -1,5 +1,8 @@
 .main-content {
+  display: flex;
+  flex-direction: column;
   flex-basis: 74%;
+  max-width: 74vw;
   background-color: $main-bg;
 }
 
@@ -7,5 +10,6 @@
   .main-content {
     flex-basis: auto;
     min-height: 100vh;
+    max-width: 100vw;
   }
 }
