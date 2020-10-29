@@ -8,6 +8,69 @@
   <title>School</title>
 </head>
 <body>
-  
+  <div class="visible-content">
+    <nav class="nav">
+      <button class="nav__mobile-btn">
+        <svg width="17" height="25" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.395996" d="M8 1.272L2.79868 6L8 10.728L6.60066 12L0 6L6.60066 0L8 1.272Z" fill="#fffff"/>
+        </svg>
+      </button>
+      <div class="nav__container">
+        <a class="nav__logo-link" href="/">
+          <img class="nav__logo" src="img/logo-main.svg" alt="Логотип портала лицея">
+        </a>
+        <h1 class="nav__slogan">портал для лицея</h1>
+        <ul class="nav__menu">
+          <li class="nav__menu-item parent">
+            <a class="nav__menu-link" href="#">Каталог занятий</a>
+          </li>
+          <li class="nav__menu-item parent">
+            <a class="nav__menu-link" href="#">Информация</a>
+            <ul class="nav__submenu">
+              <li class="nav__menu-item">
+                <a class="nav__menu-link" href="#">Новости</a>
+              </li>
+              <li class="nav__menu-item">
+                <a class="nav__menu-link" href="#">FAQ</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="main-content">
+      <!-- <header class="header">
+        <div class="container">
+
+        </div>
+      </header> -->
+      <main class="main">
+        <div class="container">
+          <div class="login-form">
+            <h2 class="login-form__heading">Войти в свой аккаунт</h2>
+            <form class="login-form__form" action="#" method="post">
+              <input class="login-form__text-input" type="email" name="email" value="" placeholder="Example@gmail.com">
+              <input class="login-form__text-input" type="password" name="password" value="" placeholder="•••••••••••">
+              <input class="visually-hidden-input" type="checkbox" name="rememeber-me" value="" id="rememeberMe">
+              <label class="login-form__checkbox-label" for="rememeberMe">Запомнить меня</label>
+
+              <input class="login-form__form-submit" type="submit" value="Войти в личный кабинет">
+            </form>
+            <p class="login-form__text">
+              Система дистанционногообучения это набор программных продуктов и решений, который объединяет и автоматизирует все или большую часть процессов, связанных с обучением
+            </p>
+          </div>
+        </div>
+      </main>
+      <!-- <footer class="footer">
+        <div class="container">
+
+        </div>
+      </footer> -->
+    </div>
+  </div>
+
+  <script src="vendor/js/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
