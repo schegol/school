@@ -1,0 +1,87 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.33);
+  z-index: 1;
+
+  &--open {
+    display: block;
+  }
+}
+
+.modal__close-btn {
+  @include dflex(nowrap, row, center, center);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  & path {
+    @include transition(fill);
+    fill: #000;
+  }
+}
+
+.modal__close-btn:hover path,
+.modal__close-btn:focus path {
+  fill: lighten($link-color, 10%);
+}
+
+.modal__box {
+  @include dflex(nowrap, column, flex-start, center);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 70px 90px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.modal__heading {
+  @include reset;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -.2px;
+}
+
+.modal--journal-date .modal__box {
+  width: 608px;
+  max-width: 90vw;
+  min-height: 389px;
+}
+
+// @media (max-width: $tablet-width) {
+//   .modal__box {
+//     padding: 60px 50px;
+//   }
+// }
+
+@media (max-width: $mobile-width) {
+  .modal__box {
+    padding: 50px 30px;
+    overflow-y: auto;
+  }
+
+  .modal__heading {
+    font-size: 28px;
+  }
+
+  .modal--journal-date .modal__box {
+    min-height: 200px;
+    max-height: 90vh;
+  }
+}

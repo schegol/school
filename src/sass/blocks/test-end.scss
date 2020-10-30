@@ -46,6 +46,108 @@
   }
 }
 
+.test-end__mistakes {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+.test-end__mistakes-line {
+  @include dflex(nowrap, row, flex-start, center);
+
+  &:not(:last-of-type) {
+    margin-bottom: 17px;
+  }
+}
+
+.test-end__mistakes-item {
+  @include reset;
+  position: relative;
+  display: inline-block;
+  padding: 20px 25px 20px 65px;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 23px;
+  white-space: nowrap;
+
+  &::before {
+    @include abs-pseudo;
+    top: 50%;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+
+  &--question {
+    flex-basis: 684px;
+    flex-shrink: 0;
+    margin-right: 23px;
+    background-color: $test-end-question-bg;
+  }
+
+  &--answer {
+    background-color: $test-end-answer-bg;
+  }
+
+  &--true {
+    &::before {
+      background-image: url("../img/icon-test-yes.svg");
+    }
+  }
+
+  &--false {
+    &::before {
+      background-image: url("../img/icon-test-no.svg");
+    }
+  }
+}
+
+.test-end__redo-link {
+  min-height: 60px;
+  margin-bottom: 127px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@media (max-width: $desktop-width) {
+  .test-end__mistakes-item {
+    font-size: 18px;
+    line-height: 18px;
+
+    &--question {
+      flex-basis: 600px;
+    }
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .test-end__mistakes-line {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .test-end__mistakes-item {
+    &--question {
+      flex-basis: auto;
+      margin-right: 0;
+    }
+
+    &--answer {
+      margin-top: 5px;
+    }
+  }
+}
+
 @media (max-width: $mobile-width) {
   .test-end__results-line {
     font-size: 24px;
@@ -57,6 +159,10 @@
     }
   }
 
+  .test-end__results {
+    padding: 25px;
+  }
+
   .test-end__btn {
     width: 300px;
     margin: 0 auto;
@@ -66,5 +172,24 @@
     background-image: none;
     font-size: 16px;
     line-height: 16px;
+  }
+
+  .test-end__redo-link {
+    max-width: 300px;
+    margin: 0 auto 70px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .test-end__mistakes {
+    overflow-x: hidden;
+  }
+
+  .test-end__mistakes-item {
+    flex-basis: auto;
+    max-width: 100%;
+    white-space: normal;
   }
 }

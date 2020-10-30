@@ -1,0 +1,107 @@
+.journal {
+  position: relative;
+}
+
+.journal__nav {
+  @include dflex(nowrap, row, space-between, center);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 437px;
+}
+
+.journal__month-toggle {
+  position: relative;
+  padding-left: 31px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+
+  &::before {
+    @include abs-pseudo;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 23px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/icon-calendar-black.svg");
+    transform: translateY(-50%);
+  }
+}
+
+.journal__switches {
+  @include dflex(nowrap, row, space-between, center);
+  width: 252px;
+}
+
+.journal__current-week {
+  @include reset;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.journal__table-block {
+  overflow-x: auto;
+}
+
+.journal__table {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  border-collapse: collapse;
+}
+
+.journal__table-cell {
+  width: 135px;
+  height: 68px;
+  padding: 10px 20px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  border: 1px solid #e7e7e7;
+
+  &--empty {
+    background-color: $journal-empty-bg;
+  }
+
+  &--heading {
+    font-weight: normal;
+  }
+
+  &:first-child {
+    width: 170px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .journal__nav {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .journal__month-toggle {
+    margin-bottom: 20px;
+  }
+
+  .journal__switches {
+    margin-bottom: 30px;
+  }
+
+  .journal__table-cell {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .journal__nav {
+    width: 100%;
+    align-items: center;
+  }
+}

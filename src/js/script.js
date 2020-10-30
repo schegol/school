@@ -56,6 +56,43 @@ $(document).ready(function() {
       }
     ]
   });
+
+  //открытие-заекрытие модалок:
+  const openModal = function() {
+    $('body').addClass('modal-open');
+    $('body').find('.modal').addClass('modal--open');
+  };
+
+  const closeModal = function() {
+    $('body').removeClass('modal-open');
+    $('body').find('.modal--open').removeClass('modal--open');
+  };
+
+  const journalModalToggle = $('.journal__month-toggle');
+  journalModalToggle.click(function(e) {
+    e.preventDefault();
+    openModal();
+  });
+
+  const modalCloseBtn = $('.modal__close-btn');
+  const modalOverlay = $('.modal');
+  const modalBox = $('.modal__box');
+
+  modalCloseBtn.click(function() {
+    closeModal();
+  });
+
+  modalOverlay.click(function (e) {
+      if (!modalBox.is(e.target) && modalBox.has(e.target).length === 0) {
+          closeModal();
+      };
+  });
+
+  $(document).keydown(function(e) {
+      if (e.keyCode == 27) {
+          closeModal();
+      };
+  });
 });
 
 $(window).on('load resize', function() {

@@ -1,0 +1,41 @@
+.months {
+  @include dflex(wrap, row, flex-start, flex-start);
+  margin-bottom: -33px;
+}
+
+.months__month {
+  position: relative;
+  flex-basis: 33.3333%;
+  margin-bottom: 33px;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+
+  &::before {
+    @include abs-pseudo;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 23px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-calendar-black.svg");
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .months {
+    margin-bottom: -20px;
+  }
+
+  .months__month {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

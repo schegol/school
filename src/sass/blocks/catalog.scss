@@ -1,0 +1,298 @@
+.catalog {
+  position: relative;
+}
+
+.catalog__nav {
+  @include dflex(nowrap, row, space-between, center);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 252px;
+}
+
+.catalog__month-toggle {
+  position: relative;
+  padding-left: 31px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+
+  &::before {
+    @include abs-pseudo;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 23px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/icon-calendar-black.svg");
+    transform: translateY(-50%);
+  }
+}
+
+.catalog__table-block  {
+  margin-bottom: 42px;
+  overflow-x: auto;
+}
+
+.catalog__table {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.catalog__table-cell {
+  // width: calc(100% / 7);
+  width: 158px;
+  // height: 123px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.2;
+  border: 1px solid #e7e7e7;
+
+  &--empty {
+    // color: rgba(0,0,0,.3);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg-calendar-noise.png");
+  }
+
+  &--heading {
+    height: 69px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    border: none;
+  }
+}
+
+.catalog__table-cell--empty .catalog__day-date {
+  color: rgba(0,0,0,.3);
+}
+
+.catalog__day-link {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  @include transition(background-color);
+  width: 100%;
+  height: 100%;
+  min-height: 123px;
+  padding: 15px 20px 10px 10px;
+
+  &:hover,
+  &:focus {
+    background-color: $catalog-bg;
+  }
+}
+
+.catalog__day-date {
+  @include transition(color);
+  display: inline-block;
+  margin-left: auto;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000;
+}
+
+.catalog__day-link:hover .catalog__day-date
+.catalog__day-link:focus .catalog__day-date {
+  color: #fff;
+}
+
+.catalog__day-tasks {
+  @include list-reset;
+  @include dflex(nowrap, column, flex-start, flex-start);
+  margin-top: auto;
+}
+
+.catalog__day-task {
+  display: inline-block;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  background-color: $header-btn-bg;
+  border-radius: 3px;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.catalog__task-list {
+  @include list-reset;
+}
+
+.catalog__task {
+  &:not(:last-child) {
+    margin-bottom: 42px;
+  }
+}
+
+.catalog__task-heading {
+  @include reset;
+  margin-bottom: 29px;
+}
+
+.catalog__task-heading-heading {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 29px;
+}
+
+.catalog__task-heading-date {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 23px;
+}
+
+.catalog__task-info {
+  @include dflex(nowrap, row, space-between, center);
+  padding: 22px 34px;
+  background-color: #fff;
+}
+
+.catalog__task-text {
+  @include dflex(nowrap, row, flex-start, center);
+}
+
+.catalog__task-name {
+  @include reset;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.catalog__task-status {
+  display: inline-block;
+  margin-left: 8px;
+  color: rgba(0,0,0,.3);
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.catalog__task-link {
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
+  text-decoration: underline;
+  color: rgba(0,0,0,.46);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .catalog__task-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catalog__task-text {
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .catalog__task-name {
+    text-align: center;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .catalog__day-date {
+    font-size: 15px;
+  }
+
+  .catalog__day-task {
+    font-size: 15px;
+  }
+
+  .catalog__table-cell {
+    width: 140px;
+  }
+
+  .catalog__task-text {
+    flex-direction: column;
+  }
+
+  .catalog__task-status {
+    margin-left: 0;
+  }
+
+  .catalog__task-name,
+  .catalog__task-status,
+  .catalog__task-link {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .catalog__nav {
+    position: static;
+    margin-bottom: 30px;
+  }
+
+  .catalog__day-date {
+    font-size: 14px;
+  }
+
+  .catalog__day-task {
+    font-size: 14px;
+  }
+
+  .catalog__day-link {
+    min-height: 100px;
+  }
+
+  .catalog__table-cell {
+    width: 130px;
+  }
+
+  .catalog__task-heading {
+    margin-bottom: 20px;
+  }
+
+  .catalog__task-heading-heading {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  .catalog__task-heading-date {
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .catalog__nav {
+    margin: 0 auto 30px;
+  }
+
+  .catalog__day-date {
+    font-size: 12px;
+  }
+
+  .catalog__day-task {
+    font-size: 12px;
+  }
+
+  .catalog__day-link {
+    min-height: 90px;
+    padding: 10px;
+  }
+
+  .catalog__table-cell {
+    width: 100px;
+  }
+}
