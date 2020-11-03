@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="vendor/css/slick.css">
+  <link rel="stylesheet" href="vendor/css/basic.min.css">
+  <link rel="stylesheet" href="vendor/css/dropzone.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>School</title>
 </head>
@@ -72,108 +74,56 @@
       </header>
       <main class="main">
         <div class="container">
-          <section class="test test--test section">
+          <section class="test test--indie section">
             <div class="test__heading-block section__heading-block">
-              <h2 class="section__heading">Тест #155</h2>
+              <h2 class="section__heading">Самостоятельная работа</h2>
               <h3 class="section__subheading">Основы математики</h3>
-              <button class="section__info-btn">?</button>
-            </div>
-            <div class="test__timer">
-              <p class="test__timer-time">59:52</p>
-              <p class="test__timer-answers-total">Ответов 6/10</p>
-              <p class="test__timer-answers-count">
-                <span class="test__timer-answers test__timer-answers--right">4</span>
-                <span class="test__timer-answers test__timer-answers--wrong">2</span>
-              </p>
             </div>
             <div class="test__questions">
               <form class="test__question" method="post" action="#">
                 <p class="test__question-heading">
-                  <span class="test__question-heading-count">14. </span>
-                  В какой строке записаны только единицы длины?
+                  <span class="test__question-heading-count">1</span>
+                  Найдите площадь четырёхугольника, изображённого на клетчатой бумаге с размером клетки 1 см × 1 см (см. рисунок). Ответ дайте в квадратных сантиметрах.
                 </p>
-                <div class="test__answer-zone test__answer-zone--radio">
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-1" type="radio" name="14" value="кг, т, км, мм">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-1">кг, т, км, мм</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-2" type="radio" name="14" value="см, мм, дм, кг">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-2">см, мм, дм, кг</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-3" type="radio" name="14" value="дм, км, мм, см2">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-3">дм, км, мм, см2</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-4" type="radio" name="14" value="м, дм, мм, см">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-4">м, дм, мм, см</label>
-                  </div>
+                <div class="test__question-image-block">
+                  <img class="test__question-image" src="img/img-indie-task.png" alt="Вычислить: cos23+cos21-cos4cos2">
                 </div>
-                <button class="test__answer-sumbit btn" type="submit">Отправить ответ</button>
+                <div class="test__answer-upload">
+                  <input class="visually-hidden-input" type="file" id="id1-1" name="" value="">
+                  <label class="test__answer-upload-dropzone dropzone" for="id1-1">
+                    <span class="">Перетащите сюда ответ в формате .jpg .pdf</span>
+                  </label>
+                  <label class="test__answer-upload-input btn" for="id1-1">
+                    <span class="">Загрузить ответ</span>
+                  </label>
+                  <p class="test__answer-upload-notice">
+                    Максимальный вес загружаемого файла: 5мб
+                  </p>
+                </div>
               </form>
               <form class="test__question" method="post" action="#">
                 <p class="test__question-heading">
-                  <span class="test__question-heading-count">15. </span>
-                  Вычислить: cos23+cos21-cos4cos2
+                  <span class="test__question-heading-count">2</span>
+                  Найдите площадь четырёхугольника, изображённого на клетчатой бумаге с размером клетки 1 см × 1 см (см. рисунок). Ответ дайте в квадратных сантиметрах.
                 </p>
-                <div class="test__answer-zone test__answer-zone--text">
-                  <div class="test__answer-line">
-                    <input class="test__answer-input test__answer-input--text" id="id15-1" type="text" name="15" value="">
-                  </div>
+                <div class="test__question-image-block">
+                  <img class="test__question-image" src="img/img-indie-task.png" alt="Вычислить: cos23+cos21-cos4cos2">
                 </div>
-                <button class="test__answer-sumbit btn" type="submit">Отправить ответ</button>
-              </form>
-              <form class="test__question" method="post" action="#">
-                <p class="test__question-heading">
-                  <span class="test__question-heading-count">16. </span>
-                  В какой строке записаны только единицы длины?
-                </p>
-                <div class="test__answer-zone test__answer-zone--checkbox">
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id16-1" type="checkbox" name="16" value="кг, т, км, мм">
-                    <label class="test__answer-input test__answer-input--checkbox" for="id16-1">кг, т, км, мм</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id16-2" type="checkbox" name="16" value="см, мм, дм, кг">
-                    <label class="test__answer-input test__answer-input--checkbox" for="id16-2">см, мм, дм, кг</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id16-3" type="checkbox" name="16" value="дм, км, мм, см2">
-                    <label class="test__answer-input test__answer-input--checkbox" for="id16-3">дм, км, мм, см2</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id16-4" type="checkbox" name="16" value="м, дм, мм, см">
-                    <label class="test__answer-input test__answer-input--checkbox" for="id16-4">м, дм, мм, см</label>
-                  </div>
+                <div class="test__answer-upload">
+                  <input class="visually-hidden-input" type="file" id="id2-2" name="" value="">
+                  <label class="test__answer-upload-dropzone dropzone" for="id2-2">
+                    <span class="">Перетащите сюда ответ в формате .jpg .pdf</span>
+                  </label>
+                  <label class="test__answer-upload-input btn" for="id2-2">
+                    <span class="">Загрузить ответ</span>
+                  </label>
+                  <p class="test__answer-upload-notice">
+                    Максимальный вес загружаемого файла: 5мб
+                  </p>
                 </div>
-                <button class="test__answer-sumbit btn" type="submit">Отправить ответ</button>
               </form>
             </div>
             <div class="test__navigation">
-              <div class="test__pagination">
-                <a class="test__pagination-link test__pagination-link--prev link" href="#">
-                  <span class="test__pagination-link-text">Назад</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">1</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">2</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">3</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">4</span>
-                </a>
-                <a class="test__pagination-link test__pagination-link--current link" href="#">
-                  <span class="test__pagination-link-text">5</span>
-                </a>
-                <a class="test__pagination-link test__pagination-link--next link" href="#">
-                  <span class="test__pagination-link-text">Вперед</span>
-                </a>
-              </div>
               <a class="test__submit btn" href="">Отправить на проверку</a>
             </div>
           </section>
@@ -204,6 +154,8 @@
 
   <script src="vendor/js/jquery-3.4.1.min.js"></script>
   <script src="vendor/js/slick.min.js"></script>
+  <script src="vendor/js/dropzone.min.js"></script>
+  <script src="vendor/js/dropzone-amd-module.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

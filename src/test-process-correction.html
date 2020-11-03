@@ -72,46 +72,12 @@
       </header>
       <main class="main">
         <div class="container">
-          <section class="test test--test section">
-            <div class="test__heading-block section__heading-block">
-              <h2 class="section__heading">Тест #155</h2>
-              <h3 class="section__subheading">Основы математики</h3>
-              <button class="section__info-btn">?</button>
-            </div>
-            <div class="test__timer">
-              <p class="test__timer-time">59:52</p>
-              <p class="test__timer-answers-total">Ответов 6/10</p>
-              <p class="test__timer-answers-count">
-                <span class="test__timer-answers test__timer-answers--right">4</span>
-                <span class="test__timer-answers test__timer-answers--wrong">2</span>
-              </p>
-            </div>
+          <section class="test test--correction section">
+            <h2 class="section__heading">Работа над ошибками (Тест #155)</h2>
+            <p class="test__introduction">
+              Проверка выполняется учителем вручную, свою оценку по работе над ошибками можно узнать у учителя.
+            </p>
             <div class="test__questions">
-              <form class="test__question" method="post" action="#">
-                <p class="test__question-heading">
-                  <span class="test__question-heading-count">14. </span>
-                  В какой строке записаны только единицы длины?
-                </p>
-                <div class="test__answer-zone test__answer-zone--radio">
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-1" type="radio" name="14" value="кг, т, км, мм">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-1">кг, т, км, мм</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-2" type="radio" name="14" value="см, мм, дм, кг">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-2">см, мм, дм, кг</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-3" type="radio" name="14" value="дм, км, мм, см2">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-3">дм, км, мм, см2</label>
-                  </div>
-                  <div class="test__answer-line">
-                    <input class="visually-hidden-input" id="id14-4" type="radio" name="14" value="м, дм, мм, см">
-                    <label class="test__answer-input test__answer-input--radio" for="id14-4">м, дм, мм, см</label>
-                  </div>
-                </div>
-                <button class="test__answer-sumbit btn" type="submit">Отправить ответ</button>
-              </form>
               <form class="test__question" method="post" action="#">
                 <p class="test__question-heading">
                   <span class="test__question-heading-count">15. </span>
@@ -119,10 +85,18 @@
                 </p>
                 <div class="test__answer-zone test__answer-zone--text">
                   <div class="test__answer-line">
-                    <input class="test__answer-input test__answer-input--text" id="id15-1" type="text" name="15" value="">
+                    <input class="test__answer-input test__answer-input--text" id="id2-1" type="text" name="15" value="">
                   </div>
                 </div>
-                <button class="test__answer-sumbit btn" type="submit">Отправить ответ</button>
+                <div class="test__answer-upload">
+                  <input class="visually-hidden-input" type="file" id="id2-2" name="" value="">
+                  <label class="test__answer-upload-input btn" for="id2-2">
+                    <span class="">Загрузить ответ</span>
+                  </label>
+                  <p class="test__answer-upload-notice">
+                    Максимальный вес загружаемого файла: 5мб
+                  </p>
+                </div>
               </form>
               <form class="test__question" method="post" action="#">
                 <p class="test__question-heading">
@@ -147,33 +121,18 @@
                     <label class="test__answer-input test__answer-input--checkbox" for="id16-4">м, дм, мм, см</label>
                   </div>
                 </div>
-                <button class="test__answer-sumbit btn" type="submit">Отправить ответ</button>
+                <div class="test__answer-upload">
+                  <input class="visually-hidden-input" type="file" id="id16-5" name="" value="">
+                  <label class="test__answer-upload-input btn" for="id16-5">
+                    <span class="">Загрузить ответ</span>
+                  </label>
+                  <p class="test__answer-upload-notice">
+                    Максимальный вес загружаемого файла: 5мб
+                  </p>
+                </div>
               </form>
             </div>
             <div class="test__navigation">
-              <div class="test__pagination">
-                <a class="test__pagination-link test__pagination-link--prev link" href="#">
-                  <span class="test__pagination-link-text">Назад</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">1</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">2</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">3</span>
-                </a>
-                <a class="test__pagination-link link" href="#">
-                  <span class="test__pagination-link-text">4</span>
-                </a>
-                <a class="test__pagination-link test__pagination-link--current link" href="#">
-                  <span class="test__pagination-link-text">5</span>
-                </a>
-                <a class="test__pagination-link test__pagination-link--next link" href="#">
-                  <span class="test__pagination-link-text">Вперед</span>
-                </a>
-              </div>
               <a class="test__submit btn" href="">Отправить на проверку</a>
             </div>
           </section>

@@ -52,4 +52,9 @@
       background-color: lighten($header-btn-bg, 10%);
     }
   }
+
+  &--disabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
 }

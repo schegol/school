@@ -1,3 +1,4 @@
+// Dropzone.autoDiscover = false;
 //навигационная область с главным меню:
 const menuZone = $('.nav');
 //кнопка открытия главного меню на мобильных устройствах:
@@ -93,6 +94,20 @@ $(document).ready(function() {
           closeModal();
       };
   });
+
+  //dropzone.js:
+  // $('.dropzone').dropzone({
+  //   url: '/file/post',
+  //   acceptedFiles: 'image/jpeg, image/png, application/pdf',
+  //   paramName: 'file', // The name that will be used to transfer the file
+  //   maxFilesize: 5, // MB
+  //   accept: function(file, done) {
+  //     if (file.name == 'justinbieber.mp3') {
+  //       done('Naha, you dont.');
+  //     }
+  //     else { done(); }
+  //   }
+  // });
 });
 
 $(window).on('load resize', function() {
